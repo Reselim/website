@@ -12,10 +12,14 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
-      - name: Install and build
-        run: |
-          yarn install
-          yarn run build
+      - name: Install
+        run: yarn install
+
+      - name: Build
+        run: yarn run build
+
+      - name: Create symlink
+        run: ln -s ./build/index.html ./build/404.html
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@4.1.5
@@ -23,3 +27,4 @@ jobs:
             branch: gh-pages
             folder: dist
             cname: reselim.xyz
+            clean: true
