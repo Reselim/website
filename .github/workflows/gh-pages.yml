@@ -19,7 +19,7 @@ jobs:
         run: yarn run build
 
       - name: Create symlink
-        run: ln -s ./dist/index.html ./dist/404.html
+        run: ln -s index.html ./dist/404.html
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@4.1.5
