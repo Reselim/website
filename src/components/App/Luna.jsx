@@ -15,7 +15,7 @@ const LunaElement = styled(animated.img)`
 `
 
 function Luna({ active }) {
-	const { blur, opacity } = useSpring({
+	const { opacity } = useSpring({
 		to: {
 			opacity: active ? 1 : 0.15,
 		},
@@ -26,7 +26,6 @@ function Luna({ active }) {
 		<LunaElement
 			src={luna}
 			style={{
-				filter: blur.to(value => `blur(${value}vh)`),
 				opacity: opacity,
 			}}
 		/>
