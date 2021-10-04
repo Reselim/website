@@ -17,8 +17,7 @@ const LunaElement = styled(animated.img)`
 function Luna({ active }) {
 	const { blur, opacity } = useSpring({
 		to: {
-			blur: active ? 0 : 2,
-			opacity: active ? 1 : 0.35,
+			opacity: active ? 1 : 0.15,
 		},
 		config: springs.tabSwitch,
 	})
